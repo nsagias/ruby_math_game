@@ -4,17 +4,12 @@ require "./player.rb"
 # player_1 = PlayerScore.new()
 # player_2 = PlayerScore.new()
 
-# player_1.player_score == 3
-# player_2.player_score == 3
+# player_1.score == 3
+# player_2.score == 3
 
 # player_1.minus_1
 
-def gameOver_and_winner(player)
-  puts "#{player} wins with a score of #{player.player_score}/3"
-  puts "---- GAME OVER ----"
-  puts "Good bye!"
-  exit(0)
-end
+
 
 def question_generator()
     def getRandom() 
@@ -61,7 +56,7 @@ def player_1
     puts "P1: #{player_1.score}/3 vs #{player_2.score}"
   else
   # end
-    game_engine
+    game.start
   end
 end
 
@@ -88,17 +83,9 @@ end
 # end
 
 
+player_1 = Player.new("Player 1", 3)
+player_2 = Player.new("Player 2", 3)
+game = Game.new(player_1, player_2)
+game.start
 
-
-
-def start
-  game = Game.new()
-  player_1 = PlayerScore.new()
-  player_2 = PlayerScore.new()
-  if true
-    game.game_engine
-  end 
-end
-
-start
 
