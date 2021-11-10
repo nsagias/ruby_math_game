@@ -60,27 +60,27 @@ end
 # call start function 
 
 
-class PlayerScore
-  attr_accessor :player_score 
+  class PlayerScore
+    attr_accessor :player_score 
 
-  def initialize()
-    @player_score = 3
+    def initialize()
+      @player_score = 3
+    end
+
+    def minus_1()
+      @player_score  -= 1
+      puts "Update player#{player_score}."
+    end
   end
 
-  def minus_1()
-    @player_score  -= 1
-    puts "Update player 1#{player_score}."
-  end
-end
+  player_1 = PlayerScore.new()
+  player_2 = PlayerScore.new()
 
-player_1 = PlayerScore.new()
-player_2 = PlayerScore.new()
+  player_1.player_score == 3
+  player_2.player_score == 3
 
-player_1.player_score == 3
-player_2.player_score == 3
-
-player_1.minus_1
-player_2.minus_1
+  player_1.minus_1
+  player_2.minus_1
 
 
 start
