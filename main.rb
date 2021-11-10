@@ -15,6 +15,10 @@ def start()
     #   current_player = player1
     #   puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
     # end
+    def getRandom() 
+      rand(1..10)
+    end
+    
     puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
 
     print">  press 1 to play 2 exit"
