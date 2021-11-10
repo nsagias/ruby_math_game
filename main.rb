@@ -3,16 +3,15 @@ def start()
   player1 = "Player 1"
   player2 = "Player 2"
   current_player =  player2
-  
-  while true
+  player1_score = 3
 
-    # if (current_player == player1)
+  while true
+    if player1_score < 1
+      puts "exiting: player 2 wins"
+      exit(0)
+    end
     #   current_player = player2
-    #   puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
-    # elsif (current_player == player2)
-    #   current_player = player1
-    #   puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
-    # end
+    
     def getRandom() 
       rand(1..10)
     end
@@ -30,16 +29,18 @@ def start()
     print">  press 1 to play 2 exit"
     choice = $stdin.gets.chomp
     mychoice = choice.to_i
-
-  
+    
+    
+    if mychoice != total
+      player1_score -= 1
+      puts "Player One score #{player1_score}"
+      puts "looping back"
+      start
+    end
     if mychoice == total
       #looping back
       puts "looping back"
-
       start
-    elsif mychoice != total
-      puts "exiting"
-      exit(0)
     end
   end
 end
