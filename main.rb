@@ -51,8 +51,8 @@ end
 
 
 
-def gameOver()
-  puts "#{player1} wins with a score of #{player1_score}/3"
+def gameOver_and_winner(player)
+  puts "#{player} wins with a score of #{player.player_score}/3"
   puts "---- GAME OVER ----"
   puts "Good bye!"
   exit(0)
