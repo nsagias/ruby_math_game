@@ -18,6 +18,8 @@ def gameOver_and_winner(player)
   puts "Good bye!"
   exit(0)
 end
+
+
 player_1 = PlayerScore.new()
 player_2 = PlayerScore.new()
 
