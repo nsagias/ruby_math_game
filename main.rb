@@ -18,6 +18,10 @@ def start()
     def getRandom() 
       rand(1..10)
     end
+    def add(a, b)
+      a + b
+    end
+    
     
     puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
 
