@@ -47,33 +47,9 @@ def start()
 end
 
 
-class PlayerScore
-  attr_accessor :player_1_score 
-  attr_accessor :player_2_score
 
-  def initialize()
-    @player_1_score = 3
-    @player_2_score = 3
-  end
 
-  def player_1_minus_1()
-    @player_1_score  -= 1
-    puts "Update player 1#{player_1_score}."
-  end
 
-  def player_2_minus_1()
-    @player_2_score  -= 1
-    puts "Update player 2#{player_2_score}."
-  end
-end
-player_1 = PlayerScore.new()
-player_2 = PlayerScore.new()
-
-player_1.player_1_score == 3
-player_2.player_2_score == 3
-
-player_1.player_1_minus_1
-player_2.player_2_minus_1
 
 def gameOver()
   puts "#{player1} wins with a score of #{player1_score}/3"
@@ -82,4 +58,29 @@ def gameOver()
   exit(0)
 end
 # call start function 
+
+
+class PlayerScore
+  attr_accessor :player_score 
+
+  def initialize()
+    @player_score = 3
+  end
+
+  def minus_1()
+    @player_score  -= 1
+    puts "Update player 1#{player_score}."
+  end
+end
+
+player_1 = PlayerScore.new()
+player_2 = PlayerScore.new()
+
+player_1.player_score == 3
+player_2.player_score == 3
+
+player_1.minus_1
+player_2.minus_1
+
+
 start
