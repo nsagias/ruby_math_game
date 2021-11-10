@@ -1,18 +1,31 @@
-def start
-  current_player = "Player 1"
+
+def start()
+  player1 = "Player 1"
+  player2 = "Player 2"
+  current_player =  player2
   val_1 = 1
   val_2 = 2
-  puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
-
-
+ 
   while true
+
+    # if (current_player == player1)
+    #   current_player = player2
+    #   puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
+    # elsif (current_player == player2)
+    #   current_player = player1
+    #   puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
+    # end
+    puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
+
     print">  press 1 to play 2 exit"
     choice = $stdin.gets.chomp
     mychoice = choice.to_i
+
   
     if mychoice == 1
       #looping back
       puts "looping back"
+
       start
     elsif mychoice == 2
       puts "exiting"
