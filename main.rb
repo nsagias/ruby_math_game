@@ -1,15 +1,5 @@
-class PlayerScore
-  attr_accessor :player_score 
-
-  def initialize()
-    @player_score = 3
-  end
-
-  def minus_1()
-    @player_score  -= 1
-    puts "Update player #{player_score}."
-  end
-end
+require "./game.rb"
+require "./player.rb"
 
 # player_1 = PlayerScore.new()
 # player_2 = PlayerScore.new()
@@ -97,42 +87,16 @@ end
 #   game_engine
 # end
 
-def game_engine
-# player_1 = PlayerScore.new()
-# player_2 = PlayerScore.new()
 
-# player_1.player_score == 3
-# player_2.player_score == 3
-
-# player_1.minus_11
-  while true # 
-    puts "---- New Turn ----"
-    puts "> You are here"
-    choice1 = $stdin.gets.chomp
-    choice = choice1.to_i
-    if choice == 1
-      player_1 #player_1.player_score
-      question_generator()
-      # exit(0)
-    elsif choice == 3
-      # puts player_1.player_score 
-    elsif choice == 4
-      # puts player_2.player_score 
-    else
-      puts "I got no idea what that means."
-      # gameOver_and_winner(player_1)
-
-    end
-  end
-end
 
 
 
 def start
+  game = Game.new()
   player_1 = PlayerScore.new()
   player_2 = PlayerScore.new()
   if true
-    game_engine
+    game.game_engine
   end 
 end
 
