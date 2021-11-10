@@ -11,26 +11,30 @@ require "./player.rb"
 
 
 
-def question_generator()
-    def getRandom() 
-      rand(1..10)
-    end
-    
-    def add(a, b)
-      a + b
-    end
 
-    val_1 = getRandom() 
-    val_2 = getRandom()
-    total = add(val_1, val_2)
+
+# def player_2
+#   puts "---- New Turn ----"
+#   puts "#{player_2} What does #{val1} plus #{val2} equal?"
+#   puts "> " # getchomps
+
+
+#     if true
+#       puts "#{player_2}: YES! You are correct."
+#     else
+#       puts "#{player_2}: Seriously? No!"
+#       player_2.minus_1
+#     end
     
-    puts " What does #{val_1} plus #{val_2} equal?"
-    puts "#{total}"
-    print">  press 1 to play 2 exit "
-    choice = $stdin.gets.chomp
-    "P1: #{player_1.score}/3 vs #{player_2.score}"
-    puts "this is XXXXXX #{mychoice = choice.to_i}"
-end
+#     if player_2.player_score < 1
+#       gameOver_and_winner(player)
+#     else
+#   # show score
+#   puts "P1: #{player_1.score}/3 vs P2: #{player_2.score}"
+#   end
+#   game_engine
+# end
+
 
 
 def player_1
@@ -65,6 +69,7 @@ end
 #   puts "---- New Turn ----"
 #   puts "#{player_2} What does #{val1} plus #{val2} equal?"
 #   puts "> " # getchomps
+
 
 #     if true
 #       puts "#{player_2}: YES! You are correct."
