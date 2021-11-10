@@ -32,12 +32,12 @@ def start()
     mychoice = choice.to_i
 
   
-    if mychoice == 1
+    if mychoice == total
       #looping back
       puts "looping back"
 
       start
-    elsif mychoice == 2
+    elsif mychoice != total
       puts "exiting"
       exit(0)
     end
