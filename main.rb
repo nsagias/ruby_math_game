@@ -1,12 +1,40 @@
+class PlayerScore
+  attr_accessor :player_score 
 
+  def initialize()
+    @player_score = 3
+  end
+
+  def minus_1()
+    @player_score  -= 1
+    puts "Update player #{player_score}."
+  end
+end
+
+
+def gameOver_and_winner(player)
+  puts "#{player} wins with a score of #{player.player_score}/3"
+  puts "---- GAME OVER ----"
+  puts "Good bye!"
+  exit(0)
+end
+player_1 = PlayerScore.new()
+player_2 = PlayerScore.new()
+
+player_1.player_score == 3
+player_2.player_score == 3
+
+player_1.minus_1
+player_2.minus_1
 def start()
-  player1 = "Player 1"
-  player2 = "Player 2"
-  current_player =  player2
-  player1_score = 3
+  player_1 = PlayerScore.new()
+  player_2 = PlayerScore.new()
+  
+  current_player =  player_1
+
 
   while true
-    if player1_score < 1
+    if player_1.player_score < 1
       puts "exiting: player 2 wins"
       exit(0)
     end
@@ -27,14 +55,14 @@ def start()
     
     puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
     puts "#{total}"
-    print">  press 1 to play 2 exit"
+    print">  press 1 to play 2 exit "
     choice = $stdin.gets.chomp
     mychoice = choice.to_i
     
     
     if mychoice != total
-      player1_score -= 1
-      puts "Player One score #{player1_score}"
+      player_1.minus_1
+      puts "Player One score #{player_1.player_score}"
       puts "looping back"
       start
     end
@@ -45,42 +73,6 @@ def start()
     end
   end
 end
-
-
-
-
-
-
-def gameOver_and_winner(player)
-  puts "#{player} wins with a score of #{player.player_score}/3"
-  puts "---- GAME OVER ----"
-  puts "Good bye!"
-  exit(0)
-end
-# call start function 
-
-
-  class PlayerScore
-    attr_accessor :player_score 
-
-    def initialize()
-      @player_score = 3
-    end
-
-    def minus_1()
-      @player_score  -= 1
-      puts "Update player#{player_score}."
-    end
-  end
-
-  player_1 = PlayerScore.new()
-  player_2 = PlayerScore.new()
-
-  player_1.player_score == 3
-  player_2.player_score == 3
-
-  player_1.minus_1
-  player_2.minus_1
 
 
 start
