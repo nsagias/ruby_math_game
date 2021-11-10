@@ -61,19 +61,14 @@ class Game
   end
   
   def start
-    # puts self.player_1.name
-    # puts self.player_2.name
     self.player_1.turn = true
     toggle_current_player
     while (self.player_1.score > 0 && self.player_2.score > 0) do
       puts "---- New Turn ----"
-      # check for current_user
-     
-      # boolean
+
       choice = question_generator
       puts choice
-      # choice1 = $stdin.gets.chomp
-      # choice = choice1.to_i
+   
       if choice == false
         adjust_score
       end
