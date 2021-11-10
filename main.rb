@@ -3,9 +3,7 @@ def start()
   player1 = "Player 1"
   player2 = "Player 2"
   current_player =  player2
-  val_1 = 1
-  val_2 = 2
- 
+  
   while true
 
     # if (current_player == player1)
@@ -21,6 +19,9 @@ def start()
     def add(a, b)
       a + b
     end
+
+    val_1 = getRandom() 
+    val_2 = getRandom() 
     
     
     puts "#{current_player} What does #{val_1} plus #{val_2} equal?"
