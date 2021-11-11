@@ -47,9 +47,8 @@ class Game
     val_2 = getRandom()
     total = add(val_1, val_2)
     
-    puts "#{self.current_player.name} What does #{val_1} plus #{val_2} equal?"
-    puts "#{total}"
-    print">  press 1 to play 2 exit "
+    puts "#{self.current_player.name}: What does #{val_1} plus #{val_2} equal?"
+  
     choice = $stdin.gets.chomp
   
     mychoice = choice.to_i
