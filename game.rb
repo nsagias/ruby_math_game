@@ -72,10 +72,10 @@ class Game
       if choice == false
         adjust_score
         puts "#{self.current_player.name}: Seriously? No!"
-        puts "P1: #{self.player_1.score}/3 vs #{self.player_2.score}/3"
+        puts "P1: #{self.player_1.score}/3 vs P2: #{self.player_2.score}/3"
       else
         puts "#{self.current_player.name}: YES! You are correct."
-        puts "P1: #{self.player_1.score}/3 vs #{self.player_2.score}/3"
+        puts "P1: #{self.player_1.score}/3 vs P2: #{self.player_2.score}/3"
       switch_turn
       toggle_current_player
       end
