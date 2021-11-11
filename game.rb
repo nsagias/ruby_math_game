@@ -80,15 +80,3 @@ class Game
   end
   
 end
-# (player_1.score < 1 || player_2.score < 1)
-
-# puts "---- New Turn ----"
-
-# puts "#{player_1} What does #{val1} plus #{val2} equal?"
-# puts "> " # getchomps
-
-# # if wrong for player 1
-# puts "#{player_1}: Seriously? No!"
-
-# # show score
-# puts "P1: #{player_1.score}/3 vs #{player_2.score}"
