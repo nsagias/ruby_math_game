@@ -71,10 +71,12 @@ class Game
    
       if choice == false
         adjust_score
-      end
+        puts "#{self.current_player.name}: Seriously? No!"
+      else
+        puts "#{self.current_player.name}: YES! You are correct."
       switch_turn
       toggle_current_player
-      
+      end
     end
     gameOver_and_winner(self.current_player)
   end
